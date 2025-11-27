@@ -30,9 +30,18 @@ export default function HomeScreen() {
   const [cart, setCart] = useState<any[]>([]);
   const [cartVisible, setCartVisible] = useState(false);
 
-  const categories = useMemo(
-    () => ["All", ...new Set(menuData.map((i) => i.category))],
-    []
+  const categories = useMemo<string[]>(
+    () => [
+      "All",
+      ...Array.from(
+        new Set(
+          menuData
+            .map((i) => i.category)
+            .filter((c): c is string => !!c) 
+        )
+      ),
+    ],
+    [menuData] 
   );
 
   const filteredMenu = useMemo(
