@@ -1,8 +1,7 @@
-// constants/theme.ts
 export const THEME = {
   colors: {
-    primary: "#6b3f2f",   // coffee brown
-    accent:  "#f4a261",   // warm accent
+    primary: "#6b3f2f",  
+    accent:  "#f4a261",  
     bg:      "#f6f6f6",
     card:    "#ffffff",
     text:    "#222222",
